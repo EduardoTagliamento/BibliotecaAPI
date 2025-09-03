@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nome": "Hélio Esperidiao",
+    "email": "helioesperidiao@gmail.com",
+    "senha": "@Helio123456"
+  },
+  {
+    "id": 2,
+    "nome": "Outro Usuário",
+    "email": "usuario2@gmail.com",
+    "senha": "123456"
+  },
+  {
+    "id": 3,
+    "nome": "Eduardo Tagliamento Barbosa",
+    "email": "etb@gmail.com",
+    "senha": "12345"
+  }
+]

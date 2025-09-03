@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD Autores com ApiService</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      padding: 2em;
+    }
+
+    table {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <h1 class="mb-4">Gerenciamento de Autores</h1>
+
+  <!-- Formulário -->
+  <div class="mb-3">
+    <input type="number" id="txtId" class="form-control mb-2" placeholder="ID (para update ou delete)" />
+    <input type="text" id="txtNomeAutor" class="form-control mb-2" placeholder="Nome do Autor" />
+    <input type="text" id="txtNacionalidade" class="form-control mb-2" placeholder="Nacionalidade" />
+    <input type="number" id="txtAnoNascimento" class="form-control mb-2" placeholder="Ano de Nascimento" />
+  </div>
+
+  <div class="mb-3" id="divBotoes"></div>
+  <div id="divResposta"></div>
+  <div id="divTabela"></div>
+
+  <script type="module">
+    import ApiService from './ApiService.js';
+
+    // Recupera dados do usuário logado
+    let userData = localStorage.getItem("userData");
+    if (userData) {
+      userData = JSON.parse(userData);
+    } else {
+      window.location.href = "login.html";
+    }
+
+    // Inicializa ApiService sem token, se não for usar JWT
+    const token = userData?.data?.token || null;
+    const api = new ApiService(token);
+
+    const txtId = document.getElementById("txtId");
+    const txtNomeAutor = document.getElementById("txtNomeAutor");
+    const txtNacionalidade = document.getElementById("txtNacionalidade");
+    const txtAnoNascimento = document.getElementById("txtAnoNascimento");
+
+    const divBotoes = document.getElementById("divBotoes");
+    const divResposta = document.getElementById("divResposta");
+
+    function createButton(text, className) {
+      const btn = document.createElement("button");
+      btn.textContent = text;
+      btn.className = `btn ${className} me-2 mb-2`;
+      return btn;
+    }
+
+    // Listar
+    const btnListar = createButton("Listar", "btn-primary");
+    btnListar.onclick = async function () {
+      listAll();
+    };
+    divBotoes.appendChild(btnListar);
+
+    // Criar
+    const btnCriar = createButton("Criar", "btn-success");
+    btnCriar.onclick = async function () {
+      if (!txtNomeAutor.value.trim()) {
+        divResposta.textContent = "Nome inválido";
+        divResposta.className = "alert alert-danger";
+        return;
+      }
+      const objetoCriar = {
+        "Autor": {
+          "nomeAutor": txtNomeAutor.value.trim(),
+          "nacionalidade": txtNacionalidade.value.trim(),
+          "anoNascimento": parseInt(txtAnoNascimento.value.trim())
+        }
+      };
+      await api.post("../autores", objetoCriar);
+      listAll();
+    };
+    divBotoes.appendChild(btnCriar);
+
+    // Atualizar
+    const btnAtualizar = createButton("Atualizar", "btn-warning");
+    btnAtualizar.onclick = async function () {
+      const id = txtId.value.trim();
+      if (!id) return alert("Informe o ID.");
+      const objetoAtualizar = {
+        "Autor": {
+          "nomeAutor": txtNomeAutor.value.trim(),
+          "nacionalidade": txtNacionalidade.value.trim(),
+          "anoNascimento": parseInt(txtAnoNascimento.value.trim())
+        }
+      };
+      await api.put("../autores", id, objetoAtualizar);
+      listAll();
+    };
+    divBotoes.appendChild(btnAtualizar);
+
+    // Excluir
+    const btnExcluir = createButton("Excluir", "btn-danger");
+    btnExcluir.onclick = async function () {
+      const id = txtId.value.trim();
+      if (!id) return alert("Informe o ID.");
+      await api.delete("../autores", id);
+      listAll();
+    };
+    divBotoes.appendChild(btnExcluir);
+
+    // Função para listar todos os autores
+    async function listAll() {
+      try {
+        const API_DATA = await api.get("../autores");
+        if (API_DATA?.success) {
+          renderTable(API_DATA);
+        }
+      } catch (err) {
+        divResposta.textContent = "Erro ao carregar dados.";
+        divResposta.className = "alert alert-danger";
+      }
+    }
+
+    function renderTable(dados) {
+      const divTabela = document.getElementById("divTabela");
+      divTabela.innerHTML = "";
+
+      const table = document.createElement("table");
+      table.className = "table table-bordered table-striped";
+
+      const thead = document.createElement("thead");
+      thead.className = "table-light";
+      const trHead = document.createElement("tr");
+      ["ID", "Nome Autor", "Nacionalidade", "Ano Nascimento", "Ações"].forEach(text => {
+        const th = document.createElement("th");
+        th.textContent = text;
+        trHead.appendChild(th);
+      });
+      thead.appendChild(trHead);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+
+      dados.data.Autores.forEach(autor => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>${autor.idAutor}</td>
+          <td>${autor.nomeAutor}</td>
+          <td>${autor.nacionalidade}</td>
+          <td>${autor.anoNascimento}</td>
+        `;
+
+        const tdAcoes = document.createElement("td");
+
+        const btnSel = createButton("Selecionar", "btn-sm btn-info me-1");
+        btnSel.onclick = function () {
+          txtId.value = autor.idAutor;
+          txtNomeAutor.value = autor.nomeAutor;
+          txtNacionalidade.value = autor.nacionalidade;
+          txtAnoNascimento.value = autor.anoNascimento;
+          divResposta.textContent = "";
+          divResposta.className = "";
+        };
+        tdAcoes.appendChild(btnSel);
+
+        const btnExc = createButton("Excluir", "btn-sm btn-danger");
+        btnExc.onclick = async function () {
+          if (confirm(`Confirma excluir o autor ID ${autor.idAutor}?`)) {
+            await api.delete("../autores", autor.idAutor);
+            listAll();
+            divResposta.textContent = `Autor ID ${autor.idAutor} excluído com sucesso.`;
+            divResposta.className = "alert alert-success";
+          }
+        };
+        tdAcoes.appendChild(btnExc);
+
+        tr.appendChild(tdAcoes);
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      divTabela.appendChild(table);
+    }
+
+    listAll();
+  </script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1745572652986
+  modified: 1745572652986
+collection:
+  - name: cargos
+    meta:
+      id: fld_cfcf04abe88b4423910238b4df071b05
+      created: 1745924583238
+      modified: 1745924642259
+      sortKey: -1745924583238
+    children:
+      - url: http://localhost/cargos
+        name: /cargos
+        meta:
+          id: req_29c1ebb61c114eb8a69f69ed4699222f
+          created: 1715287615123
+          modified: 1745924648949
+          isPrivate: false
+          sortKey: -1745924594749
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos
+        name: /cargos
+        meta:
+          id: req_4545f84006bd493295e220353c096990
+          created: 1715287849515
+          modified: 1745925195480
+          isPrivate: false
+          sortKey: -1745924594655.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "cargo": {
+                    "nomeCargo": "Auditor de dados Pleno"
+                }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/1
+        name: /cargos/:id
+        meta:
+          id: req_677042c4000f43ebbc461d7b12cc4d18
+          created: 1715287877988
+          modified: 1745935019662
+          isPrivate: false
+          sortKey: -1745924594699
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/1
+        name: /cargos/:id
+        meta:
+          id: req_7be6cf3f8bc84712b37cd192e651d27f
+          created: 1715287936425
+          modified: 1745925211605
+          isPrivate: false
+          sortKey: -1745924594549
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "cargo": {
+                    "nomeCargo": "Administrador"
+                }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/14
+        name: /cargos/:id
+        meta:
+          id: req_3b8a1a1b647547edb0e05aa46ed4000b
+          created: 1715287961850
+          modified: 1745925227602
+          isPrivate: false
+          sortKey: -1745924594449
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/importar/csv
+        name: /cargos/importar/csv
+        meta:
+          id: req_9873c178db514b16a0260eee608329b4
+          created: 1715547060795
+          modified: 1745924661388
+          isPrivate: false
+          sortKey: -1745924594652.125
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: csv
+              id: pair_e6d3a25d91224801a48c525130f005fb
+              type: file
+              fileName: C:\xampp\htdocs\api\docs\importar\Cargos.csv
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/exportar/csv
+        name: /cargos/exportar/csv
+        meta:
+          id: req_3e5d525fd4b34048957a25c181907edc
+          created: 1745573645986
+          modified: 1745925122349
+          isPrivate: false
+          sortKey: -1745924594674
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/exportar/xml
+        name: /cargos/exportar/xml
+        meta:
+          id: req_8889c2b0c0704f7fadfea55765188b38
+          created: 1745573831881
+          modified: 1745924655577
+          isPrivate: false
+          sortKey: -1745924594661.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/importar/json
+        name: /cargos/importar/json
+        meta:
+          id: req_c8ffe00107eb4eac9f95a2a50fa49fdc
+          created: 1745573975595
+          modified: 1745924664767
+          isPrivate: false
+          sortKey: -1745924594649.7812
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: json
+              id: pair_e6d3a25d91224801a48c525130f005fb
+              type: file
+              fileName: C:\xampp\htdocs\api\docs\importar\cargos.json
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/cargos/importar/xml
+        name: /cargos/importar/xml
+        meta:
+          id: req_562ad0e6730e4eef95ba7db1f96b2d81
+          created: 1745574243490
+          modified: 1745924663345
+          isPrivate: false
+          sortKey: -1745924594650.5625
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: xml
+              id: pair_e6d3a25d91224801a48c525130f005fb
+              type: file
+              fileName: C:\xampp\htdocs\api\docs\importar\cargos.xml
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: funcionarios
+    meta:
+      id: fld_caf2be8bc9d345b8b3ecdc7ee5b76a7a
+      created: 1745924684838
+      modified: 1745924696190
+      sortKey: -1715287828324.875
+    children:
+      - url: http://localhost/funcionarios
+        name: /funcionarios
+        meta:
+          id: req_99573683b3ff491f840a1cddcf9864f0
+          created: 1715288980415
+          modified: 1745924715765
+          isPrivate: false
+          sortKey: -1745924708331
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/funcionarios/1
+        name: /funcionarios/:id
+        meta:
+          id: req_09e9b0788f0b41fb9c1241c31ad39928
+          created: 1715289026594
+          modified: 1745924711119
+          isPrivate: false
+          sortKey: -1745924708231
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/funcionarios
+        name: /funcionarios
+        meta:
+          id: req_2e2000fd9569485097d415eae8e34f2e
+          created: 1715289055956
+          modified: 1745924720192
+          isPrivate: false
+          sortKey: -1745924708031
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"funcionario": {
+            		"nomeFuncionario": "Hélio",
+            		"email": "helioesperidiaoq122@gmail.com",
+            		"senha": "H&l1o123456",
+            		"recebeValeTransporte": 1,
+            		"idCargo": 1
+            	}
+            }
+        parameters:
+          - id: pair_ad6f18eacd0244a499075e4ee8216c43
+            disabled: true
+          - id: pair_7b1b1abfe16c4521bd4bde042bd4f105
+            disabled: true
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/funcionarios/1
+        name: /funcionarios/:id
+        meta:
+          id: req_da9f682aeca74a37b5cf437c41d53c6b
+          created: 1715289076340
+          modified: 1745924724414
+          isPrivate: false
+          sortKey: -1745924707831
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"funcionario":{
+            		"nomeFuncionario":"aaa",
+            		"email":"aa",
+            		"senha":"a",
+            		"recebeValeTransporte":0,
+            		"Cargo_idCargo":1
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/funcionarios/9
+        name: /funcionarios/:id
+        meta:
+          id: req_062ca4b9fbee4a749d7e16f78b5856e7
+          created: 1715289079685
+          modified: 1745924726292
+          isPrivate: false
+          sortKey: -1745924707731
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost/funcionarios/csv
+        name: /funcionarios/csv
+        meta:
+          id: req_608d2a80e6d4429b8e24958646354979
+          created: 1715552581886
+          modified: 1745924721940
+          isPrivate: false
+          sortKey: -1745924707931
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_e8ed18a9a42646349d68f76f0b76f3dd
+              name: variavelArquivo
+              type: file
+              fileName: C:\xampp\htdocs\docs\Funcionarios.csv
+        parameters:
+          - id: pair_ad6f18eacd0244a499075e4ee8216c43
+            disabled: true
+          - id: pair_7b1b1abfe16c4521bd4bde042bd4f105
+            disabled: true
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/9.1.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - url: http://localhost/backup
+    name: /backup
+    meta:
+      id: req_e92d612f8d8d4e37867c2393ccdf83d6
+      created: 1745608425114
+      modified: 1745924917879
+      isPrivate: false
+      sortKey: -1745924583338
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/teste.php
+    name: New Request
+    meta:
+      id: req_3e028e28abcc49d4b742d2c75289da8e
+      created: 1745936596562
+      modified: 1745939474259
+      isPrivate: false
+      sortKey: -1745936596562
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1745572660963
+    modified: 1745572660963
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1745572660962
+    modified: 1745572660962
+    isPrivate: false
+  subEnvironments:
+    - name: New Environment
+      meta:
+        id: env_fbfb8475730d4e5790f05d1c44d2ad55
+        created: 1715789622793
+        modified: 1715789622793
+        isPrivate: true
+        sortKey: 1715789622793

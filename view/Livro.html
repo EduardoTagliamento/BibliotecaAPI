@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD Livros com ApiService</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      padding: 2em;
+    }
+
+    table {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <h1 class="mb-4">Gerenciamento de Livros</h1>
+
+  <!-- Formulário -->
+  <div class="mb-3">
+    <input type="number" id="txtId" class="form-control mb-2" placeholder="ID (para update ou delete)" />
+    <input type="text" id="txtNomeLivro" class="form-control mb-2" placeholder="Nome do Livro" />
+    <input type="date" id="txtDataLancamento" class="form-control mb-2" placeholder="Data de Lançamento" />
+    <select id="selAutor" class="form-control mb-2">
+      <option value="">Selecione o Autor</option>
+    </select>
+    <select id="selCategoria" class="form-control mb-2">
+      <option value="">Selecione a Categoria</option>
+    </select>
+  </div>
+
+  <div class="mb-3" id="divBotoes"></div>
+  <div id="divResposta"></div>
+  <div id="divTabela"></div>
+
+  <script type="module">
+    import ApiService from './ApiService.js';
+
+    let userData = localStorage.getItem("userData");
+      if (userData) {
+        userData = JSON.parse(userData);
+      } else {
+        window.location.href = "login.html";
+      }
+
+    const token = userData.data.token;
+    const api = new ApiService(token);
+
+    let API_DATA, autoresData, categoriasData;
+
+    const txtId = document.getElementById("txtId");
+    const txtNomeLivro = document.getElementById("txtNomeLivro");
+    const txtDataLancamento = document.getElementById("txtDataLancamento");
+    const selAutor = document.getElementById("selAutor");
+    const selCategoria = document.getElementById("selCategoria");
+
+    const divBotoes = document.getElementById("divBotoes");
+    const divResposta = document.getElementById("divResposta");
+
+    function createButton(text, className) {
+      const btn = document.createElement("button");
+      btn.textContent = text;
+      btn.className = `btn ${className} me-2 mb-2`;
+      return btn;
+    }
+
+    // Carrega autores e categorias para selects
+    async function loadSelects() {
+      autoresData = await api.get("../autores");
+      categoriasData = await api.get("../categorias");
+
+      if (autoresData.success) {
+        selAutor.innerHTML = '<option value="">Selecione o Autor</option>';
+        autoresData.data.Autores.forEach(a => {
+          const opt = document.createElement("option");
+          opt.value = a.idAutor;
+          opt.textContent = a.nomeAutor;
+          selAutor.appendChild(opt);
+        });
+      }
+
+      if (categoriasData.success) {
+        selCategoria.innerHTML = '<option value="">Selecione a Categoria</option>';
+        categoriasData.data.Categorias.forEach(c => {
+          const opt = document.createElement("option");
+          opt.value = c.idCategoria;
+          opt.textContent = c.nomeCategoria;
+          selCategoria.appendChild(opt);
+        });
+      }
+    }
+
+    // Listar
+    const btnListar = createButton("Listar", "btn-primary");
+    btnListar.onclick = async function () {
+      listAll();
+    };
+    divBotoes.appendChild(btnListar);
+
+    // Criar
+    const btnCriar = createButton("Criar", "btn-success");
+    btnCriar.onclick = async function () {
+      if (txtNomeLivro.value.trim() === "" || selAutor.value === "" || selCategoria.value === "") {
+        divResposta.textContent = "Preencha todos os campos obrigatórios";
+        divResposta.className = "alert alert-danger";
+        return;
+      }
+
+      const objetoCriar = {
+        "Livro": {
+          "nomeLivro": txtNomeLivro.value.trim(),
+          "dataLancamento": txtDataLancamento.value,
+          "Autor": { "idAutor": parseInt(selAutor.value) },
+          "Categoria": { "idCategoria": parseInt(selCategoria.value) }
+        }
+      };
+      await api.post("../livros", objetoCriar);
+      listAll();
+    };
+    divBotoes.appendChild(btnCriar);
+
+    // Atualizar
+    const btnAtualizar = createButton("Atualizar", "btn-warning");
+    btnAtualizar.onclick = async function () {
+      const id = txtId.value.trim();
+      if (!id) return alert("Informe o ID.");
+      const objetoAtualizar = {
+        "Livro": {
+          "nomeLivro": txtNomeLivro.value.trim(),
+          "dataLancamento": txtDataLancamento.value,
+          "Autor": { "idAutor": parseInt(selAutor.value) },
+          "Categoria": { "idCategoria": parseInt(selCategoria.value) }
+        }
+      };
+      await api.put("../livros", id, objetoAtualizar);
+      listAll();
+    };
+    divBotoes.appendChild(btnAtualizar);
+
+    // Excluir
+    const btnExcluir = createButton("Excluir", "btn-danger");
+    btnExcluir.onclick = async function () {
+      const id = txtId.value.trim();
+      if (!id) return alert("Informe o ID.");
+      await api.delete("../livros", id);
+      listAll();
+    };
+    divBotoes.appendChild(btnExcluir);
+
+    async function listAll() {
+      API_DATA = await api.get("../livros");
+      if (API_DATA.success == true) {
+        renderTable(API_DATA);
+      }
+    }
+
+    function renderTable(dados) {
+      const divTabela = document.getElementById("divTabela");
+      divTabela.innerHTML = "";
+
+      const table = document.createElement("table");
+      table.className = "table table-bordered table-striped";
+
+      const thead = document.createElement("thead");
+      thead.className = "table-light";
+      const trHead = document.createElement("tr");
+      ["ID", "Nome Livro", "Data Lançamento", "Autor", "Categoria", "Ações"].forEach(text => {
+        const th = document.createElement("th");
+        th.textContent = text;
+        trHead.appendChild(th);
+      });
+      thead.appendChild(trHead);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+
+      dados.data.Livros.forEach(livro => {
+        const tr = document.createElement("tr");
+
+        const tdId = document.createElement("td");
+        tdId.textContent = livro.idLivro;
+        tr.appendChild(tdId);
+
+        const tdNome = document.createElement("td");
+        tdNome.textContent = livro.nomeLivro;
+        tr.appendChild(tdNome);
+
+        const tdData = document.createElement("td");
+        tdData.textContent = livro.dataLancamento;
+        tr.appendChild(tdData);
+
+        const tdAutor = document.createElement("td");
+        tdAutor.textContent = livro.Autor.nomeAutor;
+        tr.appendChild(tdAutor);
+
+        const tdCategoria = document.createElement("td");
+        tdCategoria.textContent = livro.Categoria.nomeCategoria;
+        tr.appendChild(tdCategoria);
+
+        const tdAcoes = document.createElement("td");
+
+        const btnSel = createButton("Selecionar", "btn-sm btn-info me-1");
+        btnSel.onclick = function () {
+          txtId.value = livro.idLivro;
+          txtNomeLivro.value = livro.nomeLivro;
+          txtDataLancamento.value = livro.dataLancamento;
+          selAutor.value = livro.Autor.idAutor;
+          selCategoria.value = livro.Categoria.idCategoria;
+          divResposta.textContent = "";
+          divResposta.className = "";
+        };
+        tdAcoes.appendChild(btnSel);
+
+        const btnExc = createButton("Excluir", "btn-sm btn-danger");
+        btnExc.onclick = async function () {
+          if (confirm(`Confirma excluir o livro ID ${livro.idLivro}?`)) {
+            await api.delete("../livros", livro.idLivro);
+            listAll();
+            divResposta.textContent = `Livro ID ${livro.idLivro} excluído com sucesso.`;
+            divResposta.className = "alert alert-success";
+          }
+        };
+        tdAcoes.appendChild(btnExc);
+
+        tr.appendChild(tdAcoes);
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      divTabela.appendChild(table);
+    }
+
+    // Inicializa selects e listagem
+    await loadSelects();
+    listAll();
+  </script>
+</body>
+</html>

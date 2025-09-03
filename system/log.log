@@ -1,0 +1,1023 @@
+[2025-04-30 01:50:31.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECfT
+                idCargo, 
+                nomeCargo 
+             ...' at line 1
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 143
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(143): PDO->query('SELECfT\r\n      ...')
+#1 C:\xampp\htdocs\api\src\controllers\ControlCargo.php(25): CargoDAO->readAll()
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(184): ControlCargo->index()
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(500): Router->run()
+#7 C:\xampp\htdocs\app.php(3): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:15:52.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(142): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:16:02.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:16:07.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:16:32.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(142): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:17:58.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:20:50.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:21:04.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:22:08.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:23:05.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:24:14.000] [Throwable] 
+ Throwable:
+Message: Unknown named parameter $limit
+Code: 0
+File: C:\xampp\htdocs\api\src\controllers\CargoControl.php
+Line: 143
+Trace:
+#0 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#1 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#5 C:\xampp\htdocs\api.php(24): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:24:35.000] [Throwable] 
+ Throwable:
+Message: Unknown named parameter $limit
+Code: 0
+File: C:\xampp\htdocs\api\src\controllers\CargoControl.php
+Line: 143
+Trace:
+#0 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#1 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#5 C:\xampp\htdocs\api.php(24): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:24:56.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:25:52.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:10.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:10.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:11.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:11.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:11.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:11.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:28:12.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:32:46.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 209
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(209): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:47:45.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:47:59.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:48:07.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:48:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:49:13.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:49:23.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHERE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:49:43.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cargo
+                    WHEaRE idCargo = '1'' at line 4
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 264
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(264): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(91): CargoDAO->readById(1)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(236): CargoControl->show(1)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:08.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:33.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:49.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:49.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:50.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:50.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:50:50.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:51:35.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:51:54.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+Code: HY093
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:21.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:32.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:33.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 03:52:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' OFFSET '0'' at line 6
+Code: 42000
+File: C:\xampp\htdocs\api\src\DAO\CargoDAO.php
+Line: 211
+Trace:
+#0 C:\xampp\htdocs\api\src\DAO\CargoDAO.php(211): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\api\src\controllers\CargoControl.php(143): CargoDAO->readByPage(1, 3)
+#2 C:\xampp\htdocs\api\src\routes\Roteador.php(205): CargoControl->listPaginated(1, 3)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\api\src\routes\Roteador.php(580): Router->run()
+#7 C:\xampp\htdocs\api.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-05-09 13:17:27.000] [Throwable] 
+ Throwable:
+Message: Cannot assign bool to property Funcionario::$recebeValeTransporte of type int
+Code: 0
+File: C:\xampp\htdocs\api\src\models\Funcionario.php
+Line: 124
+Trace:
+#0 C:\xampp\htdocs\api\src\controllers\FuncionarioControl.php(147): Funcionario->setRecebeValeTransporte(false)
+#1 C:\xampp\htdocs\api\src\routes\Roteador.php(629): FuncionarioControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}(12)
+#3 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\api\src\routes\Roteador.php(704): Router->run()
+#6 C:\xampp\htdocs\api.php(24): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-06-04 13:17:44.000] [Throwable] 
+ Throwable:
+Message: Class "LoginMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\api\src\routes\Roteador.php
+Line: 177
+Trace:
+#0 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\api\src\routes\Roteador.php(740): Router->run()
+#4 C:\xampp\htdocs\api.php(24): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-06-04 13:18:23.000] [Throwable] 
+ Throwable:
+Message: Class "LoginControl" not found
+Code: 0
+File: C:\xampp\htdocs\api\src\routes\Roteador.php
+Line: 188
+Trace:
+#0 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\api\src\routes\Roteador.php(743): Router->run()
+#4 C:\xampp\htdocs\api.php(24): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-06-07 12:03:27.000] [Throwable] 
+ Throwable:
+Message: Object of class stdClass could not be converted to string
+Code: 0
+File: C:\xampp\htdocs\api\src\routes\Roteador.php
+Line: 770
+Trace:
+#0 C:\xampp\htdocs\api\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\api\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\api\src\routes\Roteador.php(1104): Router->run()
+#4 C:\xampp\htdocs\api.php(24): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-06-13 01:32:06.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\CargoDAO.php(103): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\CargoControl.php(59): CargoDAO->readAll()
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(718): CargoControl->index()
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1101): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-06-13 01:34:11.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\CargoDAO.php(103): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\CargoControl.php(59): CargoDAO->readAll()
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(718): CargoControl->index()
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1101): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-06-13 13:07:36.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\LoginDAO.php(36): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\LoginControl.php(37): LoginDAO->verificarLogin(Object(Funcionario))
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(193): LoginControl->autenticar(Object(stdClass))
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1102): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-15 03:58:02.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\LoginDAO.php(36): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\LoginControl.php(37): LoginDAO->verificarLogin(Object(Funcionario))
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(193): LoginControl->autenticar(Object(stdClass))
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1107): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-15 03:58:15.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\LoginDAO.php(36): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\LoginControl.php(37): LoginDAO->verificarLogin(Object(Funcionario))
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(193): LoginControl->autenticar(Object(stdClass))
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1107): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-15 03:58:46.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\CargoDAO.php(103): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\CargoControl.php(59): CargoDAO->readAll()
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(724): CargoControl->index()
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1107): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-16 23:51:33.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php
+Line: 161
+Trace:
+#0 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(161): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\cargoFuncionario\api\src\db\Database.php(109): Database::connect()
+#2 C:\xampp\htdocs\cargoFuncionario\api\src\DAO\CargoDAO.php(103): Database::getConnection()
+#3 C:\xampp\htdocs\cargoFuncionario\api\src\controllers\CargoControl.php(59): CargoDAO->readAll()
+#4 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(724): CargoControl->index()
+#5 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\cargoFuncionario\api\src\routes\Roteador.php(1107): Router->run()
+#9 C:\xampp\htdocs\cargoFuncionario\index.php(24): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-27 17:03:14.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`biblioteca`.`livro`, CONSTRAINT `livro_ibfk_1` FOREIGN KEY (`idAutor`) REFERENCES `autor` (`idAutor`))
+Code: 23000
+File: C:\xampp\htdocs\Eduardo\api\src\DAO\AutorDAO.php
+Line: 67
+Trace:
+#0 C:\xampp\htdocs\Eduardo\api\src\DAO\AutorDAO.php(67): PDOStatement->execute()
+#1 C:\xampp\htdocs\Eduardo\api\src\controllers\AutorControl.php(115): AutorDAO->delete(9)
+#2 C:\xampp\htdocs\Eduardo\api\src\routes\Roteador.php(395): AutorControl->destroy(9)
+#3 C:\xampp\htdocs\Eduardo\api\src\routes\Router.php(458): Roteador->{closure}('9')
+#4 C:\xampp\htdocs\Eduardo\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\Eduardo\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\Eduardo\api\src\routes\Roteador.php(1085): Router->run()
+#7 C:\xampp\htdocs\Eduardo\index.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-09-03 02:27:29.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+                idCategoria = 6' at line 8
+Code: 42000
+File: C:\xampp\htdocs\Eduardo\api\src\DAO\LivroDAO.php
+Line: 252
+Trace:
+#0 C:\xampp\htdocs\Eduardo\api\src\DAO\LivroDAO.php(252): PDOStatement->execute()
+#1 C:\xampp\htdocs\Eduardo\api\src\controllers\LivroControl.php(95): LivroDAO->update(Object(Livro))
+#2 C:\xampp\htdocs\Eduardo\api\src\routes\Roteador.php(844): LivroControl->edit(Object(stdClass))
+#3 C:\xampp\htdocs\Eduardo\api\src\routes\Router.php(458): Roteador->{closure}(1)
+#4 C:\xampp\htdocs\Eduardo\api\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\Eduardo\api\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\Eduardo\api\src\routes\Roteador.php(1076): Router->run()
+#7 C:\xampp\htdocs\Eduardo\index.php(24): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 

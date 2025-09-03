@@ -1,227 +1,100 @@
+# API RESTful - CRUD de Autor, Categoria e Livro com Autenticação JWT
 
-# API RESTful - CRUD de Cargo e Funcionário
+Esta é uma API RESTful didática construída para fins de aprendizado. A API implementa conceitos de REST e MVC, permitindo realizar operações CRUD (Criar, Ler, Atualizar e Deletar) nas tabelas Autor, Categoria e Livro.
 
-Esta é uma API RESTful didática construída para fins de aprendizado. A API implementa conceitos de **REST** e **MVC**, permitindo realizar as operações **CRUD** (Criar, Ler, Atualizar e Deletar) nas tabelas **Cargo** e **Funcionário**.
+O sistema possui login com token JWT: somente após autenticação bem-sucedida é permitido acessar o CRUD completo.
 
-A API foi projetada de forma simples e eficiente, com o objetivo de ensinar como estruturar uma API usando o padrão **MVC** e **principais conceitos REST**.
+Recursos:
+Autenticação via JWT.
+CRUD completo para Autor, Categoria e Livro.
+Implementação simples de MVC.
+Foco no aprendizado e na simplicidade.
 
-### Recursos:
-- CRUD completo para **Cargo** e **Funcionário**.
-- Utiliza **REST** para comunicação.
-- Implementação simples de **MVC**.
-- Foco no aprendizado e na simplicidade de implementação.
+Funcionalidades:
+Login
+POST /login
+Descrição: Autentica o usuário e retorna um token JWT.
 
----
-
-## 🚀 Funcionalidades
-
-- **GET /cargos**: Lista todos os cargos.
-- **GET /cargos/{id}**: Retorna um cargo específico.
-- **POST /cargos**: Cria um novo cargo.
-- **PUT /cargos/{id}**: Atualiza um cargo existente.
-- **DELETE /cargos/{id}**: Deleta um cargo.
-  
-- **GET /funcionarios**: Lista todos os funcionários.
-- **GET /funcionarios/{id}**: Retorna um funcionário específico.
-- **POST /funcionarios**: Cria um novo funcionário.
-- **PUT /funcionarios/{id}**: Atualiza um funcionário existente.
-- **DELETE /funcionarios/{id}**: Deleta um funcionário.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **PHP 8.x ou superior**
-- **PDO** para interação com o banco de dados.
-- **MySQL/MariaDB** para persistência de dados.
-- **MVC** para organização do código.
-- **REST** para a estrutura da API.
-  
----
-
-## 📋 Requisitos
-
-- PHP 8.x ou superior.
-- Banco de dados MySQL ou MariaDB.
+Corpo da requisição:
+{
+  "usuario": "admin",
+  "senha": "123456"
+}
 
 
-## 💻 Instalação
+Resposta:
 
-1. Clone este repositório:
+{
+  "success": true,
+  "message": "Login efetuado com sucesso",
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR..."
+  }
+}
 
-   ```bash
-   git clone https://github.com/helioesperidiao/api-cargo-funcionario.git
-   ```
+Autor:
+GET /autores: Lista todos os autores.
+GET /autores/{id}: Retorna um autor específico.
+POST /autores: Cria um novo autor.
+PUT /autores/{id}: Atualiza um autor existente.
+DELETE /autores/{id}: Deleta um autor.
 
-2. Navegue até a pasta do projeto:
+Categoria:
+GET /categorias: Lista todas as categorias.
+GET /categorias/{id}: Retorna uma categoria específica.
+POST /categorias: Cria uma nova categoria.
+PUT /categorias/{id}: Atualiza uma categoria existente.
+DELETE /categorias/{id}: Deleta uma categoria.
 
-   ```bash
-   cd api-cargo-funcionario
-   ```
+Livro:
 
-3. Configure as credenciais do banco de dados no arquivo `.env` ou no arquivo de configuração de conexão (dependendo da sua implementação).
+GET /livros: Lista todos os livros com autor e categoria embutidos.
+GET /livros/{id}: Retorna um livro específico.
+POST /livros: Cria um novo livro.
+PUT /livros/{id}: Atualiza um livro existente.
+DELETE /livros/{id}: Deleta um livro.
 
-4. Crie o banco de dados e as tabelas necessárias. Um exemplo de estrutura SQL está disponível na pasta `db/`.
+Exemplo de JSON de criação/atualização de livro:
+{
+  "Livro": {
+    "nomeLivro": "Dom Quixote",
+    "dataLancamento": "1605-01-01",
+    "Autor": { "idAutor": 3 },
+    "Categoria": { "idCategoria": 2 }
+  }
+}
 
-5. Caso necessário, instale as dependências com o **Composer**:
 
-   ```bash
-   composer install
-   ```
+No retorno, cada livro possui o objeto Autor e Categoria completo:
+{
+  "idLivro": 1,
+  "nomeLivro": "Dom Quixote",
+  "dataLancamento": "1605-01-01",
+  "Autor": {
+    "idAutor": 3,
+    "nomeAutor": "Miguel de Cervantes"
+  },
+  "Categoria": {
+    "idCategoria": 2,
+    "nomeCategoria": "Romance"
+  }
+}
 
-6. Inicie o servidor PHP:
+Tecnologias Utilizadas:
+PHP 8.x ou superior
+PDO para interação com o banco de dados.
+MySQL/MariaDB para persistência de dados.
+MVC para organização do código.
+JWT para autenticação.
+REST para a estrutura da API.
 
-   ```bash
-   php -S localhost:8000 -t public/
-   ```
+Requisitos:
+PHP 8.x ou superior.
+Banco de dados MySQL ou MariaDB.
 
----
+Observações de Uso:
+Para qualquer operação CRUD, é necessário enviar o token JWT obtido no login no header Authorization: Bearer <token>.
+O CRUD permite selecionar, criar, atualizar e deletar cada entidade (Autor, Categoria e Livro) via interface front-end ou chamadas HTTP.
 
-## 🔑 Endpoints
-
-### Cargo
-
-- **GET /cargos**
-  - Descrição: Lista todos os cargos.
-  - Resposta:
-    ```json
-    [
-      {
-        "idCargo": 1,
-        "nomeCargo": "Desenvolvedor"
-      }
-    ]
-    ```
-
-- **GET /cargos/{id}**
-  - Descrição: Retorna um cargo específico.
-  - Parâmetros:
-    - `id` (int): ID do cargo.
-  - Resposta:
-    ```json
-            {
-                "success": true,
-                "message": "Cargo encontrado com sucesso",
-                "data": {
-                    "cargos": {
-                        "idCargo": 1,
-                        "nomeCargo": "Administrador"
-                    }
-                }
-            }
-    ```
-
-- **POST /cargos**
-  - Descrição: Cria um novo cargo.
-  - Corpo da requisição:
-    ```json
-    {
-      "nomeCargo": "Designer"
-    }
-    ```
-  - Resposta:
-    ```json
-    {
-      "idCargo": 2,
-      "nomeCargo": "Designer"
-    }
-    ```
-
-- **PUT /cargos/{id}**
-  - Descrição: Atualiza um cargo existente.
-  - Parâmetros:
-    - `id` (int): ID do cargo.
-  - Corpo da requisição:
-    ```json
-    {
-      "nomeCargo": "Gerente de TI"
-    }
-    ```
-
-- **DELETE /cargos/{id}**
-  - Descrição: Deleta um cargo específico.
-  - Parâmetros:
-    - `id` (int): ID do cargo.
-
----
-
-### Funcionário
-
-- **GET /funcionarios**
-  - Descrição: Lista todos os funcionários.
-  - Resposta:
-    ```json
-    [
-      {
-        "idFuncionario": 1,
-        "nomeFuncionario": "João Silva",
-        "idCargo": 1
-      }
-    ]
-    ```
-
-- **GET /funcionarios/{id}**
-  - Descrição: Retorna um funcionário específico.
-  - Parâmetros:
-    - `id` (int): ID do funcionário.
-  - Resposta:
-    ```json
-    {
-      "idFuncionario": 1,
-      "nomeFuncionario": "João Silva",
-      "idCargo": 1
-    }
-    ```
-
-- **POST /funcionarios**
-  - Descrição: Cria um novo funcionário.
-  - Corpo da requisição:
-    ```json
-    {
-      "nomeFuncionario": "Maria Oliveira",
-      "idCargo": 2
-    }
-    ```
-  - Resposta:
-    ```json
-    {
-      "idFuncionario": 2,
-      "nomeFuncionario": "Maria Oliveira",
-      "idCargo": 2
-    }
-    ```
-
-- **PUT /funcionarios/{id}**
-  - Descrição: Atualiza um funcionário existente.
-  - Parâmetros:
-    - `id` (int): ID do funcionário.
-  - Corpo da requisição:
-    ```json
-    {
-      "nomeFuncionario": "Maria Souza",
-      "idCargo": 3
-    }
-    ```
-
-- **DELETE /funcionarios/{id}**
-  - Descrição: Deleta um funcionário específico.
-  - Parâmetros:
-    - `id` (int): ID do funcionário.
-
----
-
-## 🎥 Playlist no YouTube
-
-Para aprender a desenvolver esta API do zero, acesse a playlist de desenvolvimento no **YouTube**:
-
-[Desenvolvimento da API CRUD no YouTube](https://www.youtube.com/playlist?list=PLpdOJd7P4_HsiLH8b5uyFAaaox4r547qe)
-
----
-
-## 📜 Licença
-
-Esta API é licenciada sob a **MIT License**.
-
----
-
-Se você tiver dúvidas ou sugestões, sinta-se à vontade para **abrir um problema** ou **contribuir**!
+Licença:
+Esta API é licenciada sob a MIT License.
